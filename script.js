@@ -3,74 +3,67 @@ const table = document.querySelector("#_table");
 const span1 = document.querySelector("#_span1");
 
 const obj = {
-  2000: [
-    {
-      date: "20.01.2000",
-      event: "Событие 1",
-      descriptionEvent: "Первое событие",
-    },
-    {
-      date: "20.04.2000",
-      event: "Событие 2",
-      descriptionEvent: "Второе событие",
-    },
-    {
-      date: "20.09.2000",
-      event: "Событие 3",
-      descriptionEvent: "Третье событие",
-    },
-  ],
-  2001: [
-    {
-      date: "20.01.2001",
-      event: "Событие 1",
-      descriptionEvent: "Первое событие",
-    },
-    {
-      date: "20.04.2001",
-      event: "Событие 2",
-      descriptionEvent: "Второе событие",
-    },
-    {
-      date: "20.09.2001",
-      event: "Событие 3",
-      descriptionEvent: "Третье событие",
-    },
-  ],
-  2002: [
-    {
-      date: "20.01.2001",
-      event: "Событие 1",
-      descriptionEvent: "Первое событие",
-    },
-    {
-      date: "20.04.2002",
-      event: "Событие 2",
-      descriptionEvent: "Второе событие",
-    },
-    {
-      date: "20.09.2002",
-      event: "Событие 3",
-      descriptionEvent: "Третье событие",
-    },
-  ],
-  2002: [
-    {
-      date: "20.01.2002",
-      event: "Событие 1",
-      descriptionEvent: "Первое событие",
-    },
-    {
-      date: "20.04.2002",
-      event: "Событие 2",
-      descriptionEvent: "Второе событие",
-    },
-    {
-      date: "20.09.2002",
-      event: "Событие 3",
-      descriptionEvent: "Третье событие",
-    },
-  ],
+  2000: {
+    date: "20.01.2000",
+    event: "Событие 1",
+    descriptionEvent: "Первое событие",
+  },
+  2000: {
+    date: "20.04.2000",
+    event: "Событие 2",
+    descriptionEvent: "Второе событие",
+  },
+  2000: {
+    date: "20.09.2000",
+    event: "Событие 3",
+    descriptionEvent: "Третье событие",
+  },
+
+  2001: {
+    date: "20.01.2001",
+    event: "Событие 1",
+    descriptionEvent: "Первое событие",
+  },
+  2001: {
+    date: "20.04.2001",
+    event: "Событие 2",
+    descriptionEvent: "Второе событие",
+  },
+  2001: {
+    date: "20.09.2001",
+    event: "Событие 3",
+    descriptionEvent: "Третье событие",
+  },
+  2002: {
+    date: "20.01.2001",
+    event: "Событие 1",
+    descriptionEvent: "Первое событие",
+  },
+  2002: {
+    date: "20.04.2002",
+    event: "Событие 2",
+    descriptionEvent: "Второе событие",
+  },
+  2002: {
+    date: "20.09.2002",
+    event: "Событие 3",
+    descriptionEvent: "Третье событие",
+  },
+  2003: {
+    date: "20.01.2002",
+    event: "Событие 1",
+    descriptionEvent: "Первое событие",
+  },
+  2003: {
+    date: "20.04.2002",
+    event: "Событие 2",
+    descriptionEvent: "Второе событие",
+  },
+  2003: {
+    date: "20.09.2002",
+    event: "Событие 3",
+    descriptionEvent: "Третье событие",
+  },
 };
 
 input1.addEventListener("keydown", function (event) {
@@ -97,16 +90,14 @@ function ShowInfoInTable(str) {
 
     tr.append(tdDate, tdEvent, tdDescrpEvent);
 
-    //   for (let arrs in obj) {
-    //     // console.log(arrs);
-    //     for (let elem of obj[arrs]) {
-    //       //   console.log(elem);
-    //       for (let key in elem) {
-    //         console.log(elem[key]);
-    //       }
-    //     }
-    //   }
+    let keys = Object.keys(obj);
+    console.log(keys);
+
+    if (keys.includes(str)) {
+      for (let key in obj) {
+      }
+    }
   }
 }
 
-ShowInfoInTable(2000);
+ShowInfoInTable("2000");
