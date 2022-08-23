@@ -75,14 +75,38 @@ const obj = {
 
 input1.addEventListener("keydown", function (event) {
   if (event.key == "Enter") {
-    if (input1.value >= 2000 && input1.value <= 2005) {
-      span1.textContent = "";
+    if (input1.value in obj) {
       span1.textContent = input1.value;
       input1.value = "";
     } else {
       span1.textContent =
-        input1.value +
-        " - неверное значение. Необходимо ввести год с 2000 по 2005";
+        input1.value + " - неверное значение. Введите любой год с 2000 по 2002";
+      input1.value = "";
     }
   }
 });
+
+function ShowInfoInTable(str) {
+  if (str in obj) {
+    let tr = document.createElement("tr");
+    table.append(tr);
+
+    let tdDate = document.createElement("td");
+    let tdEvent = document.createElement("td");
+    let tdDescrpEvent = document.createElement("td");
+
+    tr.append(tdDate, tdEvent, tdDescrpEvent);
+
+    //   for (let arrs in obj) {
+    //     // console.log(arrs);
+    //     for (let elem of obj[arrs]) {
+    //       //   console.log(elem);
+    //       for (let key in elem) {
+    //         console.log(elem[key]);
+    //       }
+    //     }
+    //   }
+  }
+}
+
+ShowInfoInTable(2000);
