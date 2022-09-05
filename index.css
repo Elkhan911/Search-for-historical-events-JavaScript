@@ -1,0 +1,59 @@
+.search {
+  margin: 30px auto 0;
+  border: 1px solid black;
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+}
+
+.search__header {
+  text-align: center;
+  font-size: 40px;
+}
+
+.search__text {
+  width: 420px;
+  height: 90px;
+  margin: auto;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.search__key {
+  text-align: center;
+  font-size: 25px;
+  min-height: 66px;
+}
+
+.search__value {
+  display: block;
+  text-align: center;
+  font-size: 25px;
+  margin: 0;
+  padding: 5px;
+}
+
+.years {
+  padding: 20px;
+  margin: 50px auto;
+  border: 1px solid black;
+  width: 80%;
+}
+
+.years__box {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.years__header {
+  text-align: center;
+  font-size: 25px;
+}
+
+.years__date {
+  min-width: 30px;
+  font-size: 24px;
+  margin: 20px;
+}
