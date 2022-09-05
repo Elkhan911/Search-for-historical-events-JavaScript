@@ -7,32 +7,43 @@
     <link rel="stylesheet" href="index.css" />
     <title>Поиск исторических событий на JavaScript</title>
   </head>
-  <body>
-    <section class="task">
-      <p class="task__description">
-        Пусть мы хотим написать сайт, показывающий таблицу исторических событий
-        за определенный год. Пусть год будет вводится в инпут. По нажатию Enter
-        давайте выведем таблицу событий, случившихся в этот год. Пусть в
-        качестве информации о событии мы хотим видеть дату, название и описание
-        события.
+  <body class="page">
+    <section class="search">
+      <h2 class="search__header">Поиск исторических событий по годам</h2>
+      <textarea
+        class="search__text"
+        id="_input1"
+        cols="30"
+        rows="10"
+        placeholder="Введите год с 2000 по 2010"
+      ></textarea>
+      <p class="search__key">
+        <b> Введенный вами год:</b>
+        <span class="search__value search__value_bold" id="_span1"></span>
+      </p>
+      <p class="search__key">
+        <b> Таблица событий:</b> <span class="search__value" id="_span2"></span>
       </p>
 
-      <h2 class="task__heading">Введите любой год от 2000 до 2003 года</h2>
-      <div class="task__zone" id="parent">
-        <input
-          class="task__input"
-          id="_input"
-          placeholder="введите год и нажмите Enter"
-          value="2000"
-        />
-
-        <p class="task__value">
-          Введеный вами год: <span id="_span1" class="task__value"></span>
+      <div class="years">
+        <p class="years__header">
+          <b> Так же вы можете просто кликнуть по предложенным годам</b>
         </p>
-        <table class="task__table" id="_table"></table>
+        <div class="years__box">
+          <a class="years__date" href="#"> 2010</a
+          ><a class="years__date" href="#">2010 </a
+          ><a class="years__date" href="#">2010 </a
+          ><a class="years__date" href="#">2010 </a
+          ><a class="years__date" href="#">2010 </a
+          ><a class="years__date" href="#">2010 </a>
+          <a class="years__date" href="#"> 2010</a
+          ><a class="years__date" href="#">2010 </a
+          ><a class="years__date" href="#">2010 </a
+          ><a class="years__date" href="#">2010 </a
+          ><a class="years__date" href="#">2010 </a>
+        </div>
       </div>
     </section>
-
     <script src="script.js"></script>
   </body>
 </html>
